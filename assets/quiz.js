@@ -158,7 +158,7 @@ choices.forEach((choice) => {
 });
 
 
-const startingMinutes = 3;
+const startingMinutes = 1;
 
 let time = startingMinutes * 60;
 
@@ -171,7 +171,7 @@ function setTime() {
     seconds = seconds < 10 ? "0" + seconds : seconds;
     time--;
     countdownEl.innerHTML = `${minutes}:${seconds}`;
-    if (time === 0) {
+    if (time <= 0) {
       clearInterval(timerInterval);
       localStorage.setItem("mostRecentScore", score);
       return window.location.assign("end.html");
