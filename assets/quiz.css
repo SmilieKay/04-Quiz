@@ -1,0 +1,88 @@
+/* :root { 
+    background-color: #241b24;
+    --other-neon: hsl(317 100% 54%);
+    --clr-bg: hsl(323 21% 16%);
+} */
+
+body {
+    color: #fff
+}
+
+.multiple-choice {
+    display: flex;
+    margin-bottom: 1.8rem;
+    width: 100%;
+    border-radius: 16px;
+     border: var(--clr-neon) .25rem solid;
+       box-shadow: 0 0 1.4rem 0 var(--clr-neon);
+    
+    font-size: 3rem;
+    min-width: 80rem;
+    
+}
+
+.multiple-choice:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 var(--other-neon);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.a-b-c-d {
+    padding: 2rem 2.5rem;
+    color: white
+}
+
+.answer-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: linear-gradient(30deg, rgb(9, 147, 9) 0%, rgb(31, 104, 31) 100% );
+}
+
+.incorrect {
+    background-color: hsl(0,100%,42%);
+   
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+    }
+
+
+ .hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+ }   
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid var(--other-neon);
+  
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: var(--other-neon);
+  
+    width: 0%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .multiple-choice {
+        min-width: 40rem;
+    }
+    
+}

@@ -1,0 +1,215 @@
+:root { 
+    background-color: #241b24;
+    --clr-neon: hsl(180,100%,50%);
+    --clr-bg: hsl(323 21% 16%);
+    --other-neon: hsl(317 100% 54%);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Tilt Neon', cursive;
+   
+}
+
+h1 {
+    font-size: 5.4rem;
+    color: var(--clr-neon);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% /-0.5),
+    0 0 1.125em currentColor;
+    margin-bottom: 2rem;
+}
+
+
+h2 {
+    color: var(--clr-neon);
+    font-size: 4.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% /-0.5),
+    0 0 1.125em currentColor;
+}
+
+p {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+    color: white;
+    text-align: center;
+}
+
+#countdown {
+    position: absolute;
+   color: var(--clr-neon);
+    font-size: 4.2rem;
+    right: 5rem;
+    top: 2rem;
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+
+}
+
+.main-styling {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.justify-center {
+    justify-content: center;
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden { 
+    display: none;
+
+}
+
+.btn {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) .50rem solid;
+  
+    border-radius: 20px;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% /1.5),
+     0 0 0.125em currentColor;
+    box-shadow: inset 0 0 1em 0 currentColor, 0 0 0.75em 0 currentColor;
+    position: relative;
+   
+}
+
+#highscore-btn::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--clr-neon);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(40deg)
+    scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    background: var(--clr-neon);
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg)
+    scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+
+
+.btn::after {
+content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+box-shadow: 0 0 2em .5em var(--clr-neon);
+opacity: 0;
+transition: opacity 100ms linear;
+background-color: var(--clr-neon);
+z-index: -1;
+}
+
+.btn:hover,
+.btn:focus {
+    cursor:pointer;
+    background: var(--clr-neon);
+    color: var(--clr-bg);
+    text-shadow: none;
+}
+
+.btn:hover::after, .btn:focus::after{
+    opacity: 1;
+}
+
+.btn:hover::before, .btn:focus::before{
+    opacity: 1;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+
+
+/* end page style */
+
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+ 
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 25, 0.5);
+}
+
+input::placeholder{
+    color: #aaa;
+}
+ 
+
+#username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+
+#end-text {
+    font-size: 2.4rem;
+   
+    text-align: center;
+}
+
+#saveScoreBtn {
+    border: none;
+}
+
+
+    
