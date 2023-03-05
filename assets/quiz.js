@@ -158,7 +158,7 @@ choices.forEach((choice) => {
 });
 
 
-const startingMinutes = 1;
+const startingMinutes = 3;
 
 let time = startingMinutes * 60;
 
@@ -184,7 +184,7 @@ function setTime() {
 }
 
 setTime();
-
+// bonusPoints = () => {if (availableQuestions.length === 0 && time > 120 && score === 1000)}
 incrementScore = (num) => {
   score += num;
   scoreText.innerText = score;
