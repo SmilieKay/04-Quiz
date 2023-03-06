@@ -95,6 +95,7 @@ let questions = [
   },
 ];
 
+
 const SCORE_POINTS = 100; //all caps because it is not going to change
 const MAX_QUESTIONS = 10;
 
@@ -184,10 +185,13 @@ function setTime() {
 }
 
 setTime();
-// bonusPoints = () => {if (availableQuestions.length === 0 && time > 120 && score === 1000)}
-incrementScore = (num) => {
-  score += num;
-  scoreText.innerText = score;
+
+incrementScore = (num) => { 
+  if (availableQuestions.length === 0 && time > 120 && score === 900) {
+    score += 1000; //adds 1000 bonus points if all the questions are correct and answered in less then one minute
+  } else
+ { score += num;
+  scoreText.innerText = score;}
 };
 
 startGame();
