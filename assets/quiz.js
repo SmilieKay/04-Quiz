@@ -188,7 +188,7 @@ setTime();
 
 incrementScore = (num) => { 
   if (availableQuestions.length === 0 && time > 120 && score === 900) {
-    score += 1000; //adds 1000 bonus points if all the questions are correct and answered in less then one minute
+    score += 1000; alert("Congratulations User!\nYou beat the MasterControl and earned the bonus points.") //adds 1000 bonus points if all the questions are correct and answered in less then one minute
   } else
  { score += num;
   scoreText.innerText = score;}
