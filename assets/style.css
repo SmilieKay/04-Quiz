@@ -1,8 +1,10 @@
+/* provides over all styling and holds variables for the colors I am using multiple times so I dont have to type them out each time */
 :root { 
     background-color: #241b24;
     --clr-neon: hsl(180,100%,50%);
     --clr-bg: hsl(323 21% 16%);
     --other-neon: hsl(317 100% 54%);
+ 
 }
 
 
@@ -14,7 +16,7 @@
     font-family: 'Tilt Neon', cursive;
    
 }
-
+/* provides the styling for all of the h1 elements */
 h1 {
     font-size: 5.4rem;
     color: var(--clr-neon);
@@ -23,7 +25,7 @@ h1 {
     margin-bottom: 2rem;
 }
 
-
+/* styling for all of the h2 elements */
 h2 {
     color: var(--clr-neon);
     font-size: 4.2rem;
@@ -32,6 +34,7 @@ h2 {
     0 0 1.125em currentColor;
 }
 
+/* styling for all of the h2 elements */
 p {
     font-size: 2rem;
     padding-bottom: 3rem;
@@ -39,6 +42,7 @@ p {
     text-align: center;
 }
 
+/* styling for the timer */
 #countdown {
     position: absolute;
    color: var(--clr-neon);
@@ -47,19 +51,20 @@ p {
     top: 2rem;
 }
 
-
+/* styling for the items in class container  */
 .container {
-    width: 100vw;
-    height: 100vh;
+    width: 100vw; /* allows items to take up 100% of the view width*/
+    height: 100vh;/* allows items to take up 100% of the view height*/
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 80rem;
+    max-width: 80rem; 
     margin: 0 auto;
     padding: 2rem;
 
 }
 
+/* styling for items in class main-styling  */
 .main-styling {
     display: flex;
     flex-direction: column;
@@ -67,20 +72,23 @@ p {
     align-items: center;
 }
 
+/* #game {
+    justify-content: center;
+} */
 
 .justify-center {
     justify-content: center;
 
 }
 
-.text-center {
+/* .text-center {
     text-align: center;
-}
+} */
 
-.hidden { 
+/* .hidden { 
     display: none;
 
-}
+} */
 
 .btn {
     font-size: 2.4rem;
@@ -162,15 +170,18 @@ z-index: -1;
     opacity: 1;
 }
 
-.btn[disabled]:hover {
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
-}
 
 
 
 /* end page style */
+
+/* controls the style for the save button while the form area is blank */
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+   
+}
 
 .end-form-container {
     width: 100%;

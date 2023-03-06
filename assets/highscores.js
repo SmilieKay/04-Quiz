@@ -1,5 +1,5 @@
-const highScoresList = document.querySelector("#highScoresList")
-const highScores = JSON.parse(localStorage.getItem("highScores")) || []
+const highScoresList = document.querySelector("#highScoresList") // calls the id from html and css
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [] // makes the stringed data into a javaScript object
 
 highScoresList.innerHTML = 
 highScores.map(score => { 
