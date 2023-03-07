@@ -72,23 +72,15 @@ p {
     align-items: center;
 }
 
-/* #game {
-    justify-content: center;
-} */
+
+
 
 .justify-center {
     justify-content: center;
 
 }
 
-/* .text-center {
-    text-align: center;
-} */
 
-/* .hidden { 
-    display: none;
-
-} */
 
 .btn {
     font-size: 2.4rem;

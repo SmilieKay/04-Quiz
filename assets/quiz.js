@@ -1,4 +1,4 @@
-const question = document.querySelector("#question"); //connects to the id question in css and makes it a variable question
+
 const choices = Array.from(document.querySelectorAll(".answer-text")); //makes a variable named choices and that is connected to the answer-text class Array.from makes a array from it items in class answer-text
 const progressText = document.querySelector("#progressText"); //makes a variable named progressText that is connected to id progressText
 const scoreText = document.querySelector("#score");
@@ -11,7 +11,7 @@ let questionCounter = 0;//questionCounter has a changeable value of 0
 let availableQuestions = [];//availableQuestions is a empty array 
 
 
-// Object with names questions with the value of question , choices 1-4 and answer
+// Array with names questions with the value of question , choices 1-4 and answer
 let questions = [
   {
     question: "What does .length do?",
